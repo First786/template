@@ -1,0 +1,137 @@
+#define _CRT_SECURE_NO_WARNINGS
+
+#include <bit>
+#include <array>
+#include <set>
+#include <map>
+#include <list>
+#include <array>
+#include <deque>
+#include <stack>
+#include <queue>
+#include <ctime>
+#include <math.h>
+#include <string>
+#include <chrono>
+#include <random>
+#include <vector>
+#include <bitset>
+#include <iomanip>
+#include <sstream>
+#include <fstream>
+#include <stdio.h>
+#include <numeric>
+#include <iostream>
+#include <algorithm>
+#include <strstream>
+#include <forward_list>
+#include <unordered_set>
+#include <unordered_map>
+
+#pragma warning(disable : 4996)
+typedef long long ll;
+typedef long double ld;
+typedef unsigned long long ull;
+
+typedef std::vector<int> vi;
+typedef std::vector<ll> vll;
+typedef std::pair<ll, ll> pll;
+typedef std::pair<int, int> pii;
+typedef std::vector<long double> vld;
+typedef std::vector<std::vector<int>> vvi;
+typedef std::vector<std::vector<ll>> vvll;
+typedef std::vector<std::pair<ll, ll>> vllll;
+typedef std::vector<std::pair<int, int>> vii;
+typedef std::vector<std::vector<long double>> vvld;
+typedef std::vector<std::vector<std::pair<ll, ll>>> vvllll;
+
+using namespace std;
+
+#define fastio ios_base::sync_with_stdio(false); cin.tie(0); cout.tie(0)
+#define pb push_back
+//#define mp make_pair
+#define all(x) (x).begin(), (x).end()
+#define fi first
+#define se second
+#define f std::format
+
+#define forn(i, n) for (int i = 0; i < (int)(n); i++)
+#define forr(i, a, b) for (int i = (int)(a); i <= (int)(b); i++)
+#define sz(x) (int)(x).size()
+#define all(x) (x).begin(), (x).end()
+
+const long long inf = 1e18;
+
+template <typename Ty>
+istream& operator>>(istream& is, vector<Ty>& a)
+{
+	for (int i = 0; i < a.size(); i++) is >> a[i];
+	return is;
+}
+template <typename Ty>
+ostream& operator<<(ostream& os, vector<Ty> a)
+{
+	//os << "\n";
+	for (int i = 0; i < a.size(); i++) os << a[i] << " ";
+	return os;
+}
+template <typename Ty>
+ostream& operator<<(ostream& os, pair<Ty, Ty> a)
+{
+	os << a.first << " " << a.second << "  ";
+	return os;
+}
+template <typename T1, typename T2>
+istream& operator>>(istream& is, std::pair<T1, T2>& a) {
+	return is >> a.first >> a.second;
+}
+template <typename Ty>
+ld log(Ty a, Ty b)
+{
+	ld ans = 0;
+	ans = log2(a);
+	ans /= log2(b);
+	return ans;
+}
+template<size_t T>
+bitset<T> operator& (bitset<T> b, int a)
+{
+	return b & bitset<T>(a);
+}
+double EPS = 1e-9;
+typedef long long ll;
+ll gcd(ll a, ll b) {
+	if (b == 0)
+		return a;
+	else
+		return gcd(b, a % b);
+}
+ll lcm(ll a, ll b) {
+	return a * (b / gcd(a, b));
+}
+
+stringstream buffer;
+template <typename Ty>
+string& operator<< (string& s, Ty a) {
+	return s;
+}
+vector<string> split(string& s) {
+	vector<string> m;
+	stringstream ss(s);
+	string item;
+	while (getline(ss, item, ' ')) {
+		m.pb(item);
+	}
+	return m;
+}
+ll mod = 1000000000ll+7ll;
+
+#define LOCAL
+#ifdef LOCAL
+#define debug(x) cerr << #x << " = " << x << endl;
+#else
+#define debug(x)
+#endif
+
+#define cout buffer
+#undef cout
